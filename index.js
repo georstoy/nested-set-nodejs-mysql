@@ -1,0 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _001_create_node_tree_table_1 = require("./migrations/001_create_node_tree_table");
+_001_create_node_tree_table_1.setup();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLHlGQUFnRTtBQUVoRSxtQ0FBSyxFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBzZXR1cCB9IGZyb20gXCIuL21pZ3JhdGlvbnMvMDAxX2NyZWF0ZV9ub2RlX3RyZWVfdGFibGVcIjtcblxuc2V0dXAoKTsiXX0=

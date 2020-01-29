@@ -1,0 +1,35 @@
+{
+  "name": "nested-set-nodejs-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "mysql": {
+    "user": "nodejs",
+    "pass": "secret",
+    "db": "nested-set"
+  },
+  "scripts": {
+    "test": "npm run db:start && npm run db:stop",
+    "dev": "npm run build && nodemon index.js",
+    "build": "tsc",
+    "dev:init": "npm run db:init",
+    "db:init": "docker container run --name nested-set-mysql -p 3306:3306 -e MYSQL_DATABASE=${npm_package_mysql_db} -e MYSQL_ROOT_PASSWORD=${npm_package_mysql_pass} -e MYSQL_USER=${npm_package_mysql_user} -e MYSQL_PASSWORD=${npm_package_mysql_pass} -d mysql",
+    "db:start": "docker container start nested-set-mysql",
+    "db:destroy": "npm run db:stop && docker container rm nested-set-mysql",
+    "db:stop": "docker container stop nested-set-mysql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.8",
+    "@types/node": "^13.5.1",
+    "nodemon": "^2.0.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
